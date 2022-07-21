@@ -1,0 +1,5 @@
+<form [formGroup]="searchPlayerFormGroup">
+    <label for="searchText">Search a player </label>
+    <input id="searchText" type="text" formControlName="searchText">
+    <button (click)="onSearchFormSubmit()">Search</button>
+</form>
