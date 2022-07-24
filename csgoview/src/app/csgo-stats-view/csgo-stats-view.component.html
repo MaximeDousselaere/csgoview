@@ -2,4 +2,13 @@
     <label for="searchText">Search a player </label>
     <input id="searchText" type="text" formControlName="searchText">
     <button (click)="onSearchFormSubmit()">Search</button>
+    <!-- loading spinner -->
+    <div *ngIf="isLoadingData">
+        Chargement...
+    </div>
+    <!-- can't find the dude -->
+    <div *ngIf="!doWeFoundTheBoy">
+        Error : <br/>
+        {{ dataRecieved?.errors[0]?.message }}
+    </div>
 </form>
